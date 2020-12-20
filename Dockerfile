@@ -9,4 +9,5 @@ RUN apk add --update --no-cache --virtual .docker-php-mongodb-dependancies \
       pecl install mongodb && \
       docker-php-ext-enable mongodb && \
       apk del .docker-php-mongodb-dependancies && \
-      php -m; \
+      php -m;
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
